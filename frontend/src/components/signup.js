@@ -20,13 +20,13 @@ const Signup = () => {
             },
             body:JSON.stringify({firstname,lastname,mobile,email,password})
         })
-        const data=await res
-        if(data.status===422 || !data){
-            window.alert('INVALID resgistration')
+        const data= await res.json()
+        if((res.status===404 || !data)||(!firstname || !lastname || !mobile || !email || !password)){
+            alert('INVALID resgistration')
         }
         else{
-            window.alert('Registration is Success')
-            history.push('/login')
+            alert('Registration is Success')
+            // history.push('/login')
         }
 
        

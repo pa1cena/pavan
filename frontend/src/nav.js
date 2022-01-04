@@ -30,9 +30,9 @@ const Nav = () => {
 
           <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
           <li className="nav-item"><Link className="nav-link" to='/Login'>Login</Link></li>
-          <li className="nav-item"><Link className="nav-link" to='/CreatePoll'>CreatePoll</Link></li>
+          {/* <li className="nav-item"><Link className="nav-link" to='/CreatePoll'>CreatePoll</Link></li> */}
           <li className="nav-item"><Link className="nav-link" to='/Results'>Results</Link></li>
-          <li className="nav-item"><Link className="nav-link" to='/Register'>Register</Link></li>
+          {/* <li className="nav-item"><Link className="nav-link" to='/Register'>Register</Link></li> */}
         </ul>
       </div>
 
@@ -42,9 +42,9 @@ const Nav = () => {
           <ul className="nav-items1">
             <li className="nav-item"><Link className="nav-link" to='/' onClick={() => setClick(!click)}>Home</Link></li>
             <li className="nav-item"><Link className="nav-link" to='/Login' onClick={() => setClick(!click)}>Login</Link></li>
-            <li className="nav-item"><Link className="nav-link" to='/CreatePoll' onClick={() => setClick(!click)}>CreatePoll</Link></li>
+            {/* <li className="nav-item"><Link className="nav-link" to='/CreatePoll' onClick={() => setClick(!click)}>CreatePoll</Link></li> */}
             <li className="nav-item"><Link className="nav-link" to='/Results' onClick={() => setClick(!click)}>Results</Link></li>
-            <li className="nav-item"><Link className="nav-link" to='/Register' onClick={() => setClick(!click)}>Register</Link></li>
+            {/* <li className="nav-item"><Link className="nav-link" to='/Register' onClick={() => setClick(!click)}>Register</Link></li> */}
           </ul>
         </div>
       </div>

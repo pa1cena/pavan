@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 const Login = () => {
@@ -13,10 +13,10 @@ const Login = () => {
   const handleSubmit =async (e) => {
     const {email,password}=person
     if(email==='admin@gmail.com' && password==='admin'){
-     return  history.push('/createpoll')
+      history.push('/createpoll')
     }
     e.preventDefault();
-    const res=await fetch('./signup',{
+    const res=await fetch('./signin',{
       method:'POST',
       headers:{
           "Content-Type":"application/json"
@@ -26,12 +26,11 @@ const Login = () => {
         password
       })
     })
-    const data=res.json()
+    const data= await res.json()
     if(res.status===400 || !data)
       alert('INVALID Credentials')
     else{
       alert('Login Success')
-      history.push('/')
 
     }
 

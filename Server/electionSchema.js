@@ -1,26 +1,22 @@
 const mongoose=require('mongoose')
 const electionSchema=new mongoose.Schema({
-    firstname:{
+    name:{
         type:String,
         required:true
     },
-    lastname:{
+    partyname:{
         type:String,
         required:true
     },
-    email:{
-        type:String,
-        required:true
-    },
-    mobile:{
+    age:{
         type:Number,
         required:true
     },
-    password:{
+    type:{
         type:String,
         required:true
     }
 
 })
-const Candidate=mongoose.model('USER',electionSchema)
+const Candidate=mongoose.model('CANDIDATE',electionSchema)
 module.exports=Candidate
